@@ -9,7 +9,7 @@ from locators import Locators
 @pytest.fixture
 def driver():
     options = Options()
-    # options.add_argument("--headless")
+    options.add_argument("--headless")
     browser = webdriver.Chrome(options=options)
     browser.get('https://stellarburgers.nomoreparties.site/')
     yield browser
