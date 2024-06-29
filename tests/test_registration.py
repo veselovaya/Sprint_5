@@ -12,7 +12,6 @@ class TestRegistration:
         email = faker.email()
         password = '1234567'
         name = 'Настя'
-        print(email)
 
         driver.find_element(*Locators.LOGIN_ON_MAIN_BUTTON).click()
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.LOGIN_BUTTON))
@@ -35,7 +34,6 @@ class TestRegistration:
     def test_registration_invalid_password(self, driver):
         email = faker.email()
         name = 'Настя'
-        print(email)
         inv_password = '123'
         driver.find_element(*Locators.LOGIN_ON_MAIN_BUTTON).click()
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.LOGIN_BUTTON))
